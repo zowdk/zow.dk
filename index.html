@@ -1,210 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>DevZoe Portfolio Website</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevZoe Portfolio Website</title>
 
-        <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
-        <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" 
-        integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+      integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc="
+      crossorigin="anonymous"
+    />
 
-        <!-- Update these with preferred fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans
-        +Pro:300,900&display=swap" rel="stylesheet">
+    <!-- Update these with preferred fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans
+        +Pro:300,900&display=swap"
+      rel="stylesheet"
+    />
 
-        <link rel="stylesheet" href="css/style.css">
-        
-        <script src="https://kit.fontawesome.com/7f3b3d32f3.js" crossorigin="anonymous"></script>
-    </head>
+    <link rel="stylesheet" href="css/style.css" />
 
-    <body>
-        <header>
-            <div class="logo">
-                <img src="img/logo-pink01.png" alt="">
-            </div>
+    <script
+      src="https://kit.fontawesome.com/7f3b3d32f3.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-            <button class="nav-toggle" aria-label="toggle navigation">
-                <span class="hamburger"></span>
-                </button>
-                <nav class="nav">
-                    <ul class="nav__list">
-                        <li class="nav__item"><a href="#home" class="nav__link" >Home</a></li>
-                        <li class="nav__item"><a href="#tallies" class="nav__link">2021</a></li>
-                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                        <li class="nav__item"><a href="#blog" class="nav__link">Blog</a></li>
-                        <li class="nav__item"><a href="#" class="nav__link">Projects</a></li>
-                        <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
-                    </ul>
-                </nav>
-        </header> 
-        
-        <!-- Introduction -->
-        <section class="intro" id="home">
-            <h1 class="section__title section__title--intro">
-                Hi, I'm <strong>Zoe Olivier Wejendorp</strong> 
-            </h1>
-            <p class="section__subtitle section__subtitle--intro">Junior Web Developer</p>
-            <img src="img/devzoe-03.JPG" alt="a picture of Zoe Olivier smiling" class="intro__img">
-        </section>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="img/logo-pink01.png" alt="" />
+      </div>
 
+      <button class="nav-toggle" aria-label="toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+          <li class="nav__item">
+            <a href="#tallies" class="nav__link">2021</a>
+          </li>
+          <li class="nav__item">
+            <a href="#about" class="nav__link">About</a>
+          </li>
+          <li class="nav__item"><a href="#blog" class="nav__link">Blog</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Projects</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-        <!-- What I'm up to in 2021 -->
-        <section class="my-tallies" id=tallies>
-            <h2 class="section__title section__title--tallies">2021 in Numbers</h2>
-            <div class="tallies tallies-list">
-                <div class="tally">
-                    <i class="far fa-comments my-tallies__item"></i>
-                    <h3>Dansk (DU3)</h3>
-                    <p>Hours learning Danish:</p>
-                    <h2>135</h2>
-                </div> <!-- / tally-->
+    <!-- Introduction -->
+    <section class="intro" id="home">
+      <h1 class="section__title section__title--intro">
+        Hi, I'm <strong>Zoe Olivier Wejendorp</strong>
+      </h1>
+      <p class="section__subtitle section__subtitle--intro">
+        Junior Web Developer
+      </p>
+      <img
+        src="img/devzoe-03.JPG"
+        alt="a picture of Zoe Olivier smiling"
+        class="intro__img"
+      />
+    </section>
 
-                <div class="tally">
-                    <i class="fas fa-laptop-code my-tallies__item"></i>
-                    <h3>Coding</h3>
-                    <p>Hours learning to code:</p>
-                    <h2>55</h2>
-                </div> <!-- / tally-->
+    <!-- What I'm up to in 2021 -->
+    <section class="my-tallies" id="tallies">
+      <h2 class="section__title section__title--tallies">2021 in Numbers</h2>
+      <div class="tallies tallies-list">
+        <div class="tally">
+          <i class="far fa-comments my-tallies__item"></i>
+          <h3>Dansk (DU3)</h3>
+          <p>Hours learning Danish:</p>
+          <h2>135</h2>
+        </div>
+        <!-- / tally-->
 
-                <div class="tally">
-                    <i class="fas fa-mug-hot  my-tallies__item"></i>
-                    <h3>Kaffe</h3>
-                    <p>Cups enjoyed:</p>
-                    <h2>155</h2>
-                </div> <!-- / tally-->
-                
-                <div class="tally">
-                    <i class="fas fa-bicycle  my-tallies__item"></i>
-                    <h3>På cykel</h3>
-                    <p>Kilometers biked:</p>
-                    <h2>98</h2>
-                </div> <!-- / tally-->
+        <div class="tally">
+          <i class="fas fa-laptop-code my-tallies__item"></i>
+          <h3>Coding</h3>
+          <p>Hours learning to code:</p>
+          <h2>60</h2>
+        </div>
+        <!-- / tally-->
 
-                <div class="tally">
-                    <i class="far fa-check-circle my-tallies__item"></i>
-                    <h3>Projects</h3>
-                    <p>Completed:</p>
-                    <h2>1</h2>
-                </div> <!-- / tally-->
-            </div> <!-- / tallies-->
+        <div class="tally">
+          <i class="fas fa-mug-hot my-tallies__item"></i>
+          <h3>Kaffe</h3>
+          <p>Cups enjoyed:</p>
+          <h2>157</h2>
+        </div>
+        <!-- / tally-->
 
-            <a href="#reflection" class="btn">See Monthly Reflections</a>
-        </section>
+        <div class="tally">
+          <i class="fas fa-bicycle my-tallies__item"></i>
+          <h3>På cykel</h3>
+          <p>Kilometers biked:</p>
+          <h2>108</h2>
+        </div>
+        <!-- / tally-->
 
-        <!-- About me -->
-        <section class="about-me" id="about">
-            <h2 class="section__title section__title--about">Who I Am</h2>
-            <p class="section__subtitle section__subtitle--about">Denmark-based code newbie + language enthusiast</p>
+        <div class="tally">
+          <i class="far fa-check-circle my-tallies__item"></i>
+          <h3>Projects</h3>
+          <p>Completed:</p>
+          <h2>1</h2>
+        </div>
+        <!-- / tally-->
+      </div>
+      <!-- / tallies-->
 
-            <div class="about-me__body">
-                <p>In 2020, I moved to a new country and decided to transition from manufacturing to software development.</p>
-                <p>Currently, my spare time is oriented around learning <strong>HTML5</strong>,
-                    <strong>CSS</strong>, <strong>JavaScript</strong> and Danish.</p>
-                <p>Self-learning is slow going at points, but I have a lot of fun collecting projects and learning challenges. 
-                    More generally, lording over pixels and discovering new ways to make them kindly do my bidding.</p>
-                <p>I constantly look for faster, simpler, or funnier ways to solve any problem I find interesting 
-                or important.</p>
-                <p>I live in Copenhagen with my family and our bicycles.</p>
-            </div>
-            <img src="img/devzoe-02.jpg" alt="a picture of Zoe looking scary" class="about-me__img">          
-        </section>
-        <!-- My Blog -->
-        <section class="my-blog" id="blog">
-            <h2 class="section__title section__title--blog">Blog</h2>
-            <p class="section__subtitle section__subtitle--blog">Things liked, learned, made and found.</p>
+      <a href="/blog-monthly-reflection-march-2021.html" class="btn"
+        >See Monthly Reflections</a
+      >
+    </section>
 
-            <div class="my-blog">
-                <!-- Blog Entry 01 -->
-                <div class="section__title section__title--blog-entry">
-                <a href="#blog-entry01.html" class="blog__entry">
-                    <img src="img/blog-01.png" alt="" class="blog__img">
-                </a>
-                </div>
-                 <!-- Blog Entry 02 -->
-                 <a href="#" class="portfolio__item">
-                    <img src="" alt="" class="blog__img">
-                </a>
-                 <!-- Portfolio item 03 -->
-                 <a href="#" class="portfolio__item">
-                    <img src="" alt="" class="portfolio__img">
-                </a>
-                 <!-- Portfolio item 04 -->
-                 <a href="#" class="portfolio__item">
-                    <img src="" alt="" class="portfolio__img">
-                </a>
-                 <!-- Portfolio item 05 -->
-                 <a href="#" class="portfolio__item">
-                    <img src="" alt="" class="portfolio__img">
-                </a>
-                 <!-- Portfolio item 06 -->
-                 <a href="#" class="portfolio__item">
-                    <img src="" alt="" class="portfolio__img">
-                </a>
-                 <!-- Portfolio item 07 -->
-                 <a href="#" class="portfolio__item">
-                    <img src="" alt="" class="portfolio__img">
-                </a>
-                 <!-- Portfolio item 08 -->
-                 <a href="#" class="portfolio__item">
-                    <img src="" alt="" class="portfolio__img">
-                </a>
-                 <!-- Portfolio item 09 -->
-                 <a href="#" class="portfolio__item">
-                    <img src="" alt="" class="portfolio__img">
-                </a>
-                 <!-- Portfolio item 10 -->
-                 <a href="#" class="portfolio__item">
-                    <img src="" alt="" class="portfolio__img">
-                </a>
-            </div>
-        </section>    
+    <!-- About me -->
+    <section class="about-me" id="about">
+      <h2 class="section__title section__title--about">Who I Am</h2>
+      <p class="section__subtitle section__subtitle--about">
+        Denmark-based code newbie + language enthusiast
+      </p>
 
-        <!-- My Work -->
-        <section class="my-work" id="work">
-            <h2 class="section__title">Projects</h2>
-            <p class="section__subtitle">Things made.</p>
-            
-            <div>
-            </a>
-            <!-- Portfolio item 01 -->
-            <a href="#" class="portfolio__item">
-               <img src="" alt="" class="portfolio__img">
-           </a>
-            </div>
+      <div class="about-me__body">
+        <p>
+          In 2020, I moved to a new country and decided to transition from
+          manufacturing to software development.
+        </p>
+        <p>
+          Currently, my spare time is oriented around learning
+          <strong>HTML5</strong>, <strong>CSS</strong>,
+          <strong>JavaScript</strong> and Danish.
+        </p>
+        <p>
+          Self-learning is slow going at points, but I have a lot of fun
+          collecting projects and learning challenges. More generally, lording
+          over pixels and discovering new ways to make them kindly do my
+          bidding.
+        </p>
+        <p>
+          I constantly look for faster, simpler, or funnier ways to solve any
+          problem I find interesting or important.
+        </p>
+        <p>I live in Copenhagen with my family and our bicycles.</p>
+      </div>
+      <img
+        src="img/devzoe-02.jpg"
+        alt="a picture of Zoe looking scary"
+        class="about-me__img"
+      />
+    </section>
+    <!-- My Skills -->
+    <section class="my-skills" id="skills">
+      <h2 class="section__title--toolbox">My toolbox of skills</h2>
+      <p class="section__subtitle--toolbox">
+        A set of tools and technologies I am comfortable with and competent in.
+      </p>
+      <div class="skills skills-list">
+        <div class="skill">
+          <i class="fab fa-html5 my-toolbox__skill"></i>
+          <h3>HTML5</h3>
+        </div>
+        <!-- / skill-->
 
-        <script src="js/index.js"></script> 
-    </body>
+        <div class="skill">
+          <i class="fab fa-css3 my-toolbox__skill"></i>
+          <h3>CSS3</h3>
+        </div>
+        <!-- / skill-->
 
+        <div class="skill">
+          <i class="fab fa-js my-toolbox__skill"></i>
+          <h3>JavaScript</h3>
+        </div>
+        <!-- / skill-->
+      </div>
+    </section>
+
+    <!-- My Blog -->
+    <section class="my-blog" id="blog">
+      <h2 class="section__title section__title--blog">Blog</h2>
+      <p class="section__subtitle section__subtitle--blog">
+        Things liked, learned, made and found.
+      </p>
+
+      <div class="my-blog">
+        <!-- Blog Entry 01 -->
+        <div class="section__title section__title--blog-entry">
+          <a href="blog-entry01.html" class="blog__entry">
+            <img src="img/blog-01.png" alt="" class="blog__img" />
+          </a>
+        </div>
+        <!-- Blog Entry 02 -->
+        <a href="blog-monthly-reflection-march-2021.html" class="blog__item">
+          <img
+            src="img/blog-mar-2021-reflection.png"
+            alt=""
+            class="blog__img"
+          />
+        </a>
+        <!-- Portfolio item 03 -->
+        <a href="#" class="portfolio__item">
+          <img src="" alt="" class="portfolio__img" />
+        </a>
+        <!-- Portfolio item 04 -->
+        <a href="#" class="portfolio__item">
+          <img src="" alt="" class="portfolio__img" />
+        </a>
+        <!-- Portfolio item 05 -->
+        <a href="#" class="portfolio__item">
+          <img src="" alt="" class="portfolio__img" />
+        </a>
+        <!-- Portfolio item 06 -->
+        <a href="#" class="portfolio__item">
+          <img src="" alt="" class="portfolio__img" />
+        </a>
+        <!-- Portfolio item 07 -->
+        <a href="#" class="portfolio__item">
+          <img src="" alt="" class="portfolio__img" />
+        </a>
+        <!-- Portfolio item 08 -->
+        <a href="#" class="portfolio__item">
+          <img src="" alt="" class="portfolio__img" />
+        </a>
+        <!-- Portfolio item 09 -->
+        <a href="#" class="portfolio__item">
+          <img src="" alt="" class="portfolio__img" />
+        </a>
+        <!-- Portfolio item 10 -->
+        <a href="#" class="portfolio__item">
+          <img src="" alt="" class="portfolio__img" />
+        </a>
+      </div>
+    </section>
+
+    <!-- My Work -->
+    <section class="my-work" id="work">
+      <h2 class="section__title">Projects</h2>
+      <p class="section__subtitle">Things made.</p>
+
+      <div>
+        <!-- Portfolio item 01 -->
+        <a href="#" class="portfolio__item">
+          <img src="" alt="" class="portfolio__img" />
+        </a>
+      </div>
+    </section>
     <!-- Footer -->
     <footer class="footer">
-        <!-- Replace with your own email address -->
-        <a href="mailto:hello@zow.dk" class="footer__link">hello@zow.dk</a>
-        <ul class="social-list">
-            <li class="social-list__item">
-                <a class="social-list__link" href="https://codepen.io">
-                    <i class="fab fa-codepen"></i>
-                </a>
-            </li>
-            <li class="social-list__item">
-                <a class="social-list__link" href="https://twitter.com">
-                    <i class="fab fa-twitter"></i>
-                </a>
-            </li>
-            <li class="social-list__item">
-                <a class="social-list__link" href="https://linkedin.com">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-            </li>
-            <li class="social-list__item">
-                <a class="social-list__link" hef="https://github.com/">
-                    <i class="fab fa-github"></i>
-                </a>
-            </li>   
-        </ul>
+      <!-- Replace with your own email address -->
+      <a href="mailto:hello@zow.dk" class="footer__link"></a>
+      <ul class="social-list">
+        <li class="social-list__item">
+          <a class="social-list__link" href="https://codepen.io/zoliwej">
+            <i class="fab fa-codepen"></i>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link" href="https://twitter.com/zoemolivier">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link" href="https://linkedin.com/zoemolivier">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link" href="https://github.com/devzoe">
+            <i class="fab fa-github"></i>
+          </a>
+        </li>
+      </ul>
     </footer>
-    
 
-</html> 
+    <script src="js/index.js"></script>
+  </body>
+</html>

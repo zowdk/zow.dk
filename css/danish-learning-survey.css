@@ -51,7 +51,7 @@ form {
   border-radius: 0.25rem;
 }
 
-#status {
+/*#status {
   width: 90%;
   max-width: 500px;
   text-align: center;
@@ -60,7 +60,7 @@ form {
   border-radius: 8px;
 }
 
-/*#status.success {
+#status.success {
   background-color: greenyellow;
   animation: status 4s ease   forwards;
 }

@@ -389,6 +389,7 @@ header {
   color: var(--clr-light);
   position: relative;
   font-weight: var(--fw-reg);
+  font-size: var(--fs-h3);
 }
 .skills {
   margin-bottom: 2em;
@@ -438,7 +439,8 @@ header {
   overflow: hidden;
 }
 .blog__img {
-  transition: transform 750ms cubic-bezier(0.5, 0, 0.5.1), opacity 250ms linear;
+  transition: transform 750ms cubic-bezier(.5, 0, .5, 1),
+  opacity 250ms linear;
 }
 .blog__entry:focus {
   position: relative;
@@ -470,7 +472,32 @@ header {
 
 /* My Work*/
 
+.my-work {
+  background-color: var(--clr-light);
+  color: var(--clr-dark);
+  text-align: center;
 
+}
+.section__subtitle--work {
+  color: var(--clr-dark);
+  font-weight: var(--fw-reg);
+  margin-bottom: 1em;
+  font-size: var(--fs-h3);
+}
+
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  max-width: 0 auto;
+}
+.portfolio__img {
+  transition: transform 750ms cubic-bezier(.5, 0, .5, 1),
+  opacity 250ms linear;
+}
+.portfolio__img {
+    background: var(--clr-accent);
+    overflow: hidden;
+}
 
 /* Footer */
 

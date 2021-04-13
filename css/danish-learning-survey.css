@@ -60,7 +60,7 @@ form {
   border-radius: 8px;
 }
 
-#status.success {
+/*#status.success {
   background-color: greenyellow;
   animation: status 4s ease   forwards;
 }
@@ -84,3 +84,4 @@ form {
     pointer-events: none;
   }
 }
+*/

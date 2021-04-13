@@ -14,7 +14,7 @@ window.addEventListener("DOMContentLoaded", function () {
         status.innerHTML = "Tak!";
     }
     function error(){
-        status.classList.add('error');
+        status.classList.add('error'); 
         status.innerHTML = "Oops! There was a problem.";
 
     }

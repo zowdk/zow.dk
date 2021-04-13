@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Danish Learning Survey</title>
+
+        <link rel="stylesheet" href="css/danish-learning-survey.css">
+        <style>
+            ul {
+                list-style: none;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="title">Danish Learning Survey</h1>
+<p id="description">Thank you for sharing about your experience learning Danish.</p>
+<br>
+<form class="survey-form" id="my-form" action="https://formspree.io/f/xzbybjkv" method="POST">
+  
+  <div class="input-headings">
+  <label for="name" id="name-label">Name</label>
+  <input id="name" type="text" name="name" placeholder="Hejsa, jeg hedder..." class="form-inputs"  required></input>
+<br>
+  
+<label for="email" id="email-label">E-mail</label>
+<input id="email" type="email" name="email" placeholder="Mitnavn@gmail.com" class="form-inputs" required></input>
+<br>
+
+<label for="number" id="number-label">Age</label>
+<input id="number" type="number" name="number" placeholder="34"min="18" max="100" class="form-inputs" required></input>
+<br>
+<label for"dropdown" id="years-learning">How long have you been learning Danish?</label>
+<select id="dropdown" class="form-inputs">
+  <option value="Select from the following">Select from the following</option>
+  <option value="less than 1 year">Less than 1 year</option>
+  <option value="1 to 2 years">1 to 2 years</option>
+  <option value="2 to 5 years">2 to 5 years</option>
+  <option value="5+ years">5+ years</option>
+</select>
+<br>
+
+  <label for"dropdown-02"  id="role">Which best describes your current role?</label>
+  <select id="dropdown-02" class="form-inputs">
+    <option value="Select_from_the_following">Select from the following</option>
+    <option value="student">Student</option>
+    <option value="working_full-time">Working full-time</option>
+    <option value="learning_full-time">Learning full-time</option>
+    <option value="prefer_not_to_say">Prefer not to say</option>
+    <option value="other">Other</option>    
+</select>
+<br>
+
+<label for="learning-goals" id="goals"><b>What are your top 3 Danish learning goals?</b></label>
+<br>
+<ul>  
+<li>
+  <input id="danish_education" type="checkbox"  name="learning-goals" value="modules">
+<label for="danish_education">Complete the modules in DU1, 2, 3</label></input>
+  </li>
+  <li>
+<input id="speaking_confidence" type="checkbox"  name="learning-goals" value="confidence">
+<label for="speaking_confidence">Confidence when speaking to others</label></input>
+  </li>
+  <li>
+  <input id="expressions" type="checkbox"  name="learning-goals" value="expressions">
+<label for="expressions">Know which expressions to use, and when</label></input>
+  </li>
+  <li>
+<input id="pronunciation" type="checkbox"  name="learning-goals" value="pronunciation">
+<label for="pronunciation">Improve pronunciation, be understood by Danes</label></input>
+</li>
+<li>
+<input id="reading-text" type="checkbox" name="learning-goals" value="reading-text">
+<label for="reading-text">Ability to understand any written text</label></input>
+</li>
+<li>
+<input id="danish-humor" type="checkbox" name="learning-goals" value="danish-humor">
+<label for="danish-humor">Understand Danish humor, be funny and tell good stories</label></input>
+</li>
+<li>
+<input id="technical" type="checkbox" name="learning-goals" value="technical">
+<label for="technical">Communicate effectively at a technical/ professional level</label></input>
+</li>
+<li>
+<input id="danish-writing" type="checkbox" name="learning-goals" value="danish-writing">
+<label for="danish-writing">Write in Danish with few / no errors</label></input>
+</li>
+<li>
+<input id="family" type="checkbox" name="learning-goals" value="family">
+<label for="family">Be with Danish family without language being a barrier</label></input>
+</li>
+</ul>
+<label for="challenges"><b>What do you think is most difficult?</b></label>
+<br>
+<ul>
+<input id="motivated" type="radio" name="challenges" value="motivated">
+<label for="motivated">Hard to stay motivated</label>
+<br>
+<input id="practice" type="radio" name="challenges" value="practice">
+<label for="practice">Can't find fun ways to practice</label>
+<br>
+<input id="danes" type="radio" name="challenges" value="danes">
+<label for="danes">Don't know any Danes to learn from</label>
+<br>
+<input id="feedback" type="radio" name="challenges" value="feedback">
+<label for="feedback">Not getting enough feedback</label>
+<br>
+<input id="other" type="radio" name="challenges" value="other">
+<label for="other">It's something else...</label>
+</ul>
+<br>
+<label="text-area">Additional Comments?</label>
+<br>
+<textarea id="textarea" name="instructions" rows="5" cols="40" class="form-inputs">
+  
+</textarea>
+<br>
+<input id="submit" type="submit" value="Submit" class="submit-button" onclick="alert('Submitted! Thank you for sharing about your experience learning Danish')">
+</div>
+</form> 
+<div id="status" class="success">Submitted. Tak!</div>
+<footer>
+  <p>Made in cph with <strong><3</strong> by <a href="https://zow.dk/" style="text-decoration:none;"> @zowdk</a> </p>
+</footer>
+    <script src= "danish-learning-survey.js"></script>
+    </body>
+
+</html>

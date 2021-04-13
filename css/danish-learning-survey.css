@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+
+h1, p {
+  text-align: center;
+  width: 600px;
+}
+
+body {
+  font-family:'Courier Prime', monospace;
+  line-height: 1.4;
+  background-color: #D7DCDD;
+  width: 500px;
+  margin: auto;
+}
+
+form {
+  background: #008080;
+  padding: 2.5rem 2.5rem;
+  border-radius: 2rem;
+  width: 500px;
+  margin: auto;
+  box-shadow: 60px -16px #DAA520;
+}
+.submit-button {
+  font-family:'Courier Prime', monospace;
+  width: 100%;
+  padding: 0.75rem;
+  background: #DAA520;
+  color: black;
+  font-weight: bold;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: .3s ease background-color;
+}
+
+.submit-button:hover{
+  background-color: greenyellow;
+} 
+.input-headings {
+  margin: 0 auto 1.25rem auto;
+  padding: 0.25rem;
+}
+
+.form-inputs {
+  display: block;
+  width: 90%;
+  height: 2rem;
+  padding: 0.25rem 0.75rem;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+}
+
+#status {
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  padding: 10px;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+#status.success {
+  background-color: greenyellow;
+  animation: status 4s ease   forwards;
+}
+
+#status.error {
+  background-color: rgb(rgb(219, 94, 94));
+  color: white;
+  animation: status 4s ease forwards;
+}
+@keyframes status {
+  0% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  90% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}

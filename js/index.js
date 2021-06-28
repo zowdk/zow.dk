@@ -10,3 +10,10 @@ navLinks.forEach(link => {
         document.body.classList.remove('nav-open');
     })
 })
+
+function sendEventTrackingData(action, category, label){
+    gtag('event', action, {
+        'event_category': category, 
+        'event_label': label
+    });
+}

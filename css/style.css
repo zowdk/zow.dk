@@ -28,7 +28,7 @@
 
 @media (min-width: 800px) {
   :root {
-    --fs-h1: 4.5rem;
+    --fs-h1: 3rem;
     --fs-h2: 3.75rem;
     --fs-h3: 1.5rem;
     --fs-body: 1.125rem;
@@ -439,8 +439,7 @@ header {
   overflow: hidden;
 }
 .blog__img {
-  transition: transform 750ms cubic-bezier(.5, 0, .5, 1),
-  opacity 250ms linear;
+  transition: transform 750ms cubic-bezier(0.5, 0, 0.5, 1), opacity 250ms linear;
 }
 .blog__entry:focus {
   position: relative;
@@ -470,13 +469,24 @@ header {
   margin-right: auto;
 }
 
+/* Year Review (featured content)*/
+.container-featured-content {
+  background: #264653;
+  font-family: "rubik", sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  grid-auto-rows: minmax(100px, auto);
+}
+
 /* My Work*/
 
 .my-work {
   background-color: var(--clr-light);
   color: var(--clr-dark);
   text-align: center;
-
 }
 .section__subtitle--work {
   color: var(--clr-dark);
@@ -491,14 +501,13 @@ header {
   max-width: 0 auto;
 }
 .portfolio__img {
-  transition: transform 750ms cubic-bezier(.5, 0, .5, 1),
-  opacity 250ms linear;
+  transition: transform 750ms cubic-bezier(0.5, 0, 0.5, 1), opacity 250ms linear;
   width: 500px;
   height: 500px;
 }
 .portfolio__img {
-    background: var(--clr-accent);
-    overflow: hidden;
+  background: var(--clr-accent);
+  overflow: hidden;
 }
 
 /* Footer */

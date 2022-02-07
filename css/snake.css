@@ -52,6 +52,20 @@ h2 {
   box-shadow: -2px 6px 18px 3px rgba(0, 0, 0, 0.75);
 }
 
+.alert {
+  background-color: #b26e63;
+  color: #654c4f;
+  max-width: 250px;
+  margin: 0 auto;
+  margin-top: -20px;
+  font-size: 1.25em;
+  font-weight: 900;
+  padding: 0.5em;
+  display: none;
+}
+.active {
+  display: block;
+}
 /* button */
 button {
   background-color: #b5e48c;

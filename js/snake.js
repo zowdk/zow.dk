@@ -8,13 +8,14 @@ const DIRECTIONS = {
 const snackCalories = {
   "🍎": 1,
   "🧁": 10,
-  "🍩": 15,
-  "☕️": 25,
+  "🍩": 25,
+  "☕️": 5,
 };
 
 const grid = document.querySelector(".grid");
 const startBtn = document.getElementById("start");
 const scoreboard = document.getElementById("score");
+const message = " ";
 let squares = [];
 let currentSnake = [2, 1, 0];
 let direction = DIRECTIONS.RIGHT;
@@ -59,10 +60,16 @@ function startGame() {
   currentSnake.forEach((index) => squares[index].classList.add("snake"));
   generateSnack();
   timerId = setInterval(move, intervalTime);
+  // remove error message
+  const message = document.getElementById("message");
+  message.style.display = "none";
 }
 
 function fail() {
   console.log("you died");
+  const message = document.getElementById("message");
+  message.style.display = "block";
+
   return clearInterval(timerId);
 }
 
@@ -100,7 +107,7 @@ function move() {
 
   // deal with snake head getting snack
   if (currentSnake[0] === snackIndex) {
-    //remove class of apple
+    //remove class of snack
     squares[currentSnake[0]].classList.remove("snack");
     squares[currentSnake[0]].textContent = " ";
     //grow snake by adding class of snake
@@ -108,7 +115,7 @@ function move() {
     //grow snake array
     currentSnake.push(tail);
 
-    // what snack type is it determines new score
+    // snack type determines new score
     score += snackCalories[snackType];
 
     //generate new apple
@@ -130,9 +137,13 @@ function generateSnack() {
   squares[snackIndex].classList.add("snack");
 
   snackType = "🍎";
-  if (Math.random() < 0.2) {
-    //randomly, ~20% of the time
-    snackType = "🧁";
+  const getSnack = Math.random();
+  if (getSnack < 0.05) {
+    snackType = "☕️"; //randomly, ~5% of the time
+  } else if (getSnack < 0.15) {
+    snackType = "🍩"; //randomly, ~15% of the time
+  } else if (getSnack < 0.2) {
+    snackType = "🧁"; //randomly, ~20% of the time
   }
 
   squares[snackIndex].textContent = snackType;

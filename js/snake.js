@@ -1,11 +1,25 @@
+const width = 10;
+const DIRECTIONS = {
+  LEFT: -1,
+  RIGHT: 1,
+  UP: -width,
+  DOWN: width,
+};
+const snackCalories = {
+  "🍎": 1,
+  "🧁": 10,
+  "🍩": 15,
+  "☕️": 25,
+};
+
 const grid = document.querySelector(".grid");
 const startBtn = document.getElementById("start");
 const scoreboard = document.getElementById("score");
 let squares = [];
-let currentSnake = [0, 1, 2];
-let direction = 1;
-const width = 10;
-let appleIndex = 0;
+let currentSnake = [2, 1, 0];
+let direction = DIRECTIONS.RIGHT;
+let snackIndex = 0;
+let snackType = "🍎";
 let score = 0;
 let intervalTime = 700;
 let speed = 0.9;
@@ -32,30 +46,48 @@ function startGame() {
   //remove snake
   currentSnake.forEach((index) => squares[index].classList.remove("snake"));
   //remove apple
-  squares[appleIndex].classList.remove("apple");
-  squares[appleIndex].textContent = " ";
+  squares[snackIndex].classList.remove("snack");
+  squares[snackIndex].textContent = " ";
   clearInterval(timerId);
-  currentSnake = [0, 1, 2];
+  currentSnake = [2, 1, 0];
   score = 0;
   //   readd new score to browser
   scoreboard.textContent = score;
-  direction = 1;
+  direction = DIRECTIONS.RIGHT;
   intervalTime = 700;
-  generateApple();
   //   readd class snake to new current snake
   currentSnake.forEach((index) => squares[index].classList.add("snake"));
+  generateSnack();
   timerId = setInterval(move, intervalTime);
 }
 
+function fail() {
+  console.log("you died");
+  return clearInterval(timerId);
+}
+
 function move() {
+  //   debugger;
+  if (direction === DIRECTIONS.LEFT && currentSnake[0] % width === 0) {
+    return fail();
+  }
+  if (direction === DIRECTIONS.RIGHT && currentSnake[0] % width === 9) {
+    return fail();
+  }
+
   if (
-    (currentSnake[0] + width * width >= 100 && direction === width) || //if hits bottom
-    (currentSnake[0] % width === width - 1 && direction === 1) || //if hits right
-    (currentSnake[0] % width === 0 % direction) === -1 || //if hits left
-    (currentSnake[0] - width < 0 && direction === -width) || //if hits top
-    squares[currentSnake[0] + direction].classList.contains("snake") //if snake drives into self
-  )
-    return clearInterval(timerId);
+    direction === DIRECTIONS.DOWN &&
+    currentSnake[0] + width > width * width - 1
+  ) {
+    return fail();
+  }
+  if (direction === DIRECTIONS.UP && currentSnake[0] - width < 0) {
+    return fail();
+  }
+
+  if (squares[currentSnake[0] + direction].classList.contains("snake")) {
+    return fail();
+  }
 
   //remove last element from current snake array
   const tail = currentSnake.pop();
@@ -66,18 +98,21 @@ function move() {
   //add styling so we can see movement
   squares[currentSnake[0]].classList.add("snake");
 
-  // deal with snake head getting apple
-  if (squares[currentSnake[0]].classList.contains("apple")) {
+  // deal with snake head getting snack
+  if (currentSnake[0] === snackIndex) {
     //remove class of apple
-    squares[currentSnake[0]].classList.remove("apple");
+    squares[currentSnake[0]].classList.remove("snack");
+    squares[currentSnake[0]].textContent = " ";
     //grow snake by adding class of snake
     squares[tail].classList.add("snake");
     //grow snake array
     currentSnake.push(tail);
+
+    // what snack type is it determines new score
+    score += snackCalories[snackType];
+
     //generate new apple
-    generateApple();
-    //add one pt to score
-    score++;
+    generateSnack();
     //update score board
     scoreboard.textContent = score;
     //speed up snake
@@ -88,14 +123,21 @@ function move() {
   squares[currentSnake[0]].classList.add("snake");
 }
 
-function generateApple() {
+function generateSnack() {
   do {
-    appleIndex = Math.floor(Math.random() * squares.length);
-  } while (squares[appleIndex].classList.contains("snake"));
-  squares[appleIndex].classList.add("apple");
-  squares[appleIndex].textContent = "🍎";
+    snackIndex = Math.floor(Math.random() * squares.length);
+  } while (squares[snackIndex].classList.contains("snake"));
+  squares[snackIndex].classList.add("snack");
+
+  snackType = "🍎";
+  if (Math.random() < 0.2) {
+    //randomly, ~20% of the time
+    snackType = "🧁";
+  }
+
+  squares[snackIndex].textContent = snackType;
 }
-generateApple();
+generateSnack();
 
 // controls
 function control(e) {

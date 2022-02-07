@@ -7,7 +7,7 @@ let direction = 1;
 const width = 10;
 let appleIndex = 0;
 let score = 0;
-let intervalTime = 1000;
+let intervalTime = 700;
 let speed = 0.9;
 let timerId = 0;
 
@@ -40,7 +40,7 @@ function startGame() {
   //   readd new score to browser
   scoreboard.textContent = score;
   direction = 1;
-  intervalTime: 1000;
+  //   intervalTime: 700;
   generateApple();
   //   readd class snake to new current snake
   currentSnake.forEach((index) => squares[index].classList.add("snake"));
@@ -49,16 +49,11 @@ function startGame() {
 
 function move() {
   if (
-    //if hits bottom
-    (currentSnake[0] + width * width >= 100 && direction === width) ||
-    //if hits right
-    (currentSnake[0] % width === width - 1 && direction === 1) ||
-    //if hits left
-    (currentSnake[0] % width === 0 % direction) === -1 ||
-    //if hits top
-    (currentSnake[0] - width < 0 && direction === -width) ||
-    //if snake drives into self
-    squares[currentSnake[0] + direction].classList.contains("snake")
+    (currentSnake[0] + width * width >= 100 && direction === width) || //if hits bottom
+    (currentSnake[0] % width === width - 1 && direction === 1) || //if hits right
+    (currentSnake[0] % width === 0 % direction) === -1 || //if hits left
+    (currentSnake[0] - width < 0 && direction === -width) || //if hits top
+    squares[currentSnake[0] + direction].classList.contains("snake") //if snake drives into self
   )
     return clearInterval(timerId);
 
@@ -89,7 +84,6 @@ function move() {
     intervalTime = intervalTime * speed;
     timerId = etInterval(move, intervalTime);
   }
-
   squares[currentSnake[0]].classList.add("snake");
 }
 

@@ -1,28 +1,72 @@
+/* google font */
 @import url("https://fonts.googleapis.com/css2?family=Arimo:wght@500&family=Audiowide&family=Orbitron&family=Roboto:wght@300;900&display=swap");
 
+/* resets */
 html,
 body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+
+/* general styling */
 body {
   font-family: "Audiowide", monospace;
+  text-align: center;
+  background-color: #34a0a4;
 }
 
 .grid {
   width: 200px;
   height: 200px;
-  border: 3px solid #000;
+  border: 3px solid #52b69a;
   display: flex;
   flex-wrap: wrap;
+  margin: 0 auto;
 }
 
 .square {
   width: 20px;
   height: 20px;
-  background-color: pink;
+  background-color: #76c893;
 }
 .snake {
   background-color: green;
+}
+
+/* typography */
+h1,
+h2 {
+  color: #184e77;
+  font-size: 2.5rem;
+}
+
+/* layout */
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 4em;
+  background-color: #52b69a;
+  padding: 1em;
+  box-shadow: -2px 6px 18px 3px rgba(0, 0, 0, 0.75);
+}
+
+/* button */
+button {
+  background-color: #b5e48c;
+  box-shadow: -2px 6px 18px 3px rgba(0, 0, 0, 0.75);
+  color: #1a759f;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border: none;
+  padding: 20px 60px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+button:hover,
+button:focus {
+  background-color: #d9ed92;
 }

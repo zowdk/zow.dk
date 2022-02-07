@@ -61,7 +61,7 @@ function move() {
     //add one pt to score
     score++;
     //update score board
-
+    scoreboard.textContent = score;
     //speed up snake
   }
 

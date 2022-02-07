@@ -7,6 +7,8 @@ let direction = 1;
 const width = 10;
 let appleIndex = 0;
 let score = 0;
+let intervalTime = 1000;
+let speed = 0.9;
 
 function createGrid() {
   //create 100 of these elements with a for loop
@@ -63,12 +65,15 @@ function move() {
     //update score board
     scoreboard.textContent = score;
     //speed up snake
+    clearInterval(timerId);
+    intervalTime = intervalTime * speed;
+    timerId = etInterval(move, intervalTime);
   }
 
   squares[currentSnake[0]].classList.add("snake");
 }
 move();
-let timerId = setInterval(move, 1000);
+let timerId = setInterval(move, intervalTime);
 
 function generateApple() {
   do {

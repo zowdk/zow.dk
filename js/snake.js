@@ -29,9 +29,22 @@ createGrid();
 currentSnake.forEach((index) => squares[index].classList.add("snake"));
 
 function startGame() {
+  //remove snake
+  currentSnake.forEach((index) => squares[index].classList.remove("snake"));
+  //remove apple
+  squares[appleIndex].classList.remove("apple");
+  squares[appleIndex].textContent = " ";
+  clearInterval(timerId);
+  currentSnake = [0, 1, 2];
+  score = 0;
+  //   readd new score to browser
+  scoreboard.textContent = score;
+  direction = 1;
+  intervalTime: 1000;
+  generateApple();
+  //   readd class snake to new current snake
+  currentSnake.forEach((index) => squares[index].classList.add("snake"));
   timerId = setInterval(move, intervalTime);
-  startBtn.addEventListener("click", startGame);
-  console.log("start pressed");
 }
 
 function move() {
@@ -106,3 +119,4 @@ function control(e) {
   }
 }
 document.addEventListener("keydown", control);
+startBtn.addEventListener("click", startGame);

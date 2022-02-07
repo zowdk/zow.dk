@@ -9,6 +9,7 @@ let appleIndex = 0;
 let score = 0;
 let intervalTime = 1000;
 let speed = 0.9;
+let timerId = 0;
 
 function createGrid() {
   //create 100 of these elements with a for loop
@@ -26,6 +27,12 @@ function createGrid() {
 createGrid();
 
 currentSnake.forEach((index) => squares[index].classList.add("snake"));
+
+function startGame() {
+  timerId = setInterval(move, intervalTime);
+  startBtn.addEventListener("click", startGame);
+  console.log("start pressed");
+}
 
 function move() {
   if (
@@ -72,8 +79,6 @@ function move() {
 
   squares[currentSnake[0]].classList.add("snake");
 }
-move();
-let timerId = setInterval(move, intervalTime);
 
 function generateApple() {
   do {

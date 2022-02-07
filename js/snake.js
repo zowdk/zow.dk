@@ -40,7 +40,7 @@ function startGame() {
   //   readd new score to browser
   scoreboard.textContent = score;
   direction = 1;
-  //   intervalTime: 700;
+  intervalTime = 700;
   generateApple();
   //   readd class snake to new current snake
   currentSnake.forEach((index) => squares[index].classList.add("snake"));
@@ -64,6 +64,7 @@ function move() {
   //add square in direction we are moving
   currentSnake.unshift(currentSnake[0] + direction);
   //add styling so we can see movement
+  squares[currentSnake[0]].classList.add("snake");
 
   // deal with snake head getting apple
   if (squares[currentSnake[0]].classList.contains("apple")) {
@@ -82,7 +83,7 @@ function move() {
     //speed up snake
     clearInterval(timerId);
     intervalTime = intervalTime * speed;
-    timerId = etInterval(move, intervalTime);
+    timerId = setInterval(move, intervalTime);
   }
   squares[currentSnake[0]].classList.add("snake");
 }

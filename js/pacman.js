@@ -2,13 +2,7 @@ const width = 28;
 const grid = document.querySelector(".grid");
 const scoreboard = document.getElementById("score");
 let squares = [];
-
-const DIRECTONS = {
-  LEFT: -1,
-  RIGHT: 1,
-  UP: -width,
-  DOWN: width,
-};
+let score = 0;
 
 //  28 * 28 = 784
 // 0 - pac dots
@@ -134,3 +128,11 @@ function control(e) {
   squares[pacmanCurrentIndex].classList.add("pacman");
 }
 document.addEventListener("keydown", control);
+
+function pacDotEaten() {
+  if (squares[pacmanCurrentIndex].classList.contains("pac-dot")) {
+    squares[pacmanCurrentIndex].classList.remove("pac-dot");
+    score++;
+    scoreboard.innerHTML = score;
+  }
+}

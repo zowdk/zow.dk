@@ -55,11 +55,9 @@ function createBoard() {
 
     if (layout[i] === 0) {
       squares[i].classList.add("pac-dot");
-    }
-    if (layout[i] === 1) {
+    } else if (layout[i] === 1) {
       squares[i].classList.add("wall");
-    }
-    if (layout[i] === 3) {
+    } else if (layout[i] === 3) {
       squares[i].classList.add("power-pellet");
     }
   }

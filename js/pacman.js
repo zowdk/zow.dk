@@ -142,6 +142,9 @@ class Ghost {
     this.className = className;
     this.startIndex = startIndex;
     this.speed = speed;
+    this.currentIndex = startIndex;
+    this.isScared = false;
+    this.timerId = Nan;
   }
 }
 const ghosts = [
@@ -155,3 +158,13 @@ const ghosts = [
 ghosts.forEach((ghost) =>
   squares[ghost.startIndex].classList.add(ghost.className)
 );
+
+// move ghosts
+
+ghosts.forEach((ghost) => moveGhost(ghost));
+
+function moveGhost() {
+  console.log("moved ghost");
+  const directions = [-1, +1, -width, +width];
+  let directions = directions[Math.floor(Math.random() * directions.length)];
+}

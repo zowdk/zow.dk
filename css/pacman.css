@@ -18,3 +18,20 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
+
+.pac-dot {
+  background-color: lightgreen;
+  border: 5px solid #fff;
+  box-sizing: border-box;
+}
+.wall {
+  background-color: blue;
+}
+.power-pellet {
+  background-color: crimson;
+  border: 7.5px; /* round gets 50% of div size */
+}
+.pacman {
+  background-color: yellow;
+  border-radius: 50%;
+}

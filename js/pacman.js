@@ -144,9 +144,14 @@ class Ghost {
     this.speed = speed;
   }
 }
-ghosts[
-  (new Ghost("blinky", 348, 250),
+const ghosts = [
+  new Ghost("blinky", 348, 250),
   new Ghost("pinky", 376, 400),
   new Ghost("inky", 351, 300),
-  new Ghost("clyde", 379, 500))
+  new Ghost("clyde", 379, 500),
 ];
+
+//  draw ghosts on grid
+ghosts.forEach((ghost) =>
+  squares[ghost.startIndex].classList.add(ghost.className)
+);

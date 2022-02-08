@@ -25,7 +25,7 @@ body {
   box-sizing: border-box;
 }
 .wall {
-  background-color: blue;
+  background-color: darkblue;
 }
 .power-pellet {
   background-color: crimson;

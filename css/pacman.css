@@ -3,6 +3,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: #e9d8a6;
 }
 
 .grid {
@@ -16,22 +17,22 @@ body {
 .grid div {
   width: 15px;
   height: 15px;
-  background-color: lightblue;
 }
 
 .pac-dot {
-  background-color: green;
+  background-color: #001219;
   border: 5px solid #fff;
   box-sizing: border-box;
 }
 .wall {
-  background-color: #000;
+  background-color: #005f73;
 }
 .power-pellet {
-  background-color: crimson;
-  border: 7.5px; /* round gets 50% of div size */
+  background-color: #bb3e03;
+  border: 7.5px;
 }
 .pacman {
-  background-color: yellow;
+  background-color: #ee9b00;
   border-radius: 50%;
+  border: none;
 }

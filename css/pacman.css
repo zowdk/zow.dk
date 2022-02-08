@@ -29,7 +29,7 @@ body {
 }
 .power-pellet {
   background-color: #bb3e03;
-  border: 7.5px;
+  border-radius: 7.5px;
 }
 .pacman {
   background-color: #ee9b00;

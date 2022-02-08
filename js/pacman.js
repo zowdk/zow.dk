@@ -1,3 +1,10 @@
+const DIRECTIONS = {
+  LEFT: -1,
+  RIGHT: 1,
+  UP: -width,
+  DOWN: width,
+};
+
 const width = 28;
 const grid = document.querySelector(".grid");
 const scoreboard = document.getElementById("score");
@@ -67,3 +74,16 @@ createBoard();
 // starting position of pacman
 let pacmanCurrentIndex = 490;
 squares[pacmanCurrentIndex].classList.add("pacman");
+
+function control(e) {
+  if (e.keyCode === 40) {
+    console.log("pressed down");
+  } else if (e.keycode === 38) {
+    console.log("pressed up");
+  } else if (e.keyCode === 37) {
+    console.log("pressed left");
+  } else if (e.keyCode === 39) {
+    console.log("pressed right");
+  }
+}
+document.addEventListener(keydown, control);

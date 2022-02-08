@@ -52,6 +52,10 @@ function createBoard() {
     grid.appendChild(square);
     // put square in squares array
     squares.push(square);
+
+    if (layout[i] === 0) {
+      squares[i].classList.add("pac-dot");
+    }
   }
 }
 createBoard();

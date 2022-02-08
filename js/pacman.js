@@ -167,4 +167,13 @@ function moveGhost() {
   console.log("moved ghost");
   const directions = [-1, +1, -width, +width];
   let directions = directions[Math.floor(Math.random() * directions.length)];
+
+  ghost.timerId = setInterval(function () {
+    //remove ghost class
+    squares[ghost.currentIndex].classList.remove(ghost.className);
+    //add random direction
+    ghost.currentIndex += direction;
+    //readd ghost class
+    squares[ghost.currentIndex].classList.add(ghost.className);
+  }, ghost.speed);
 }

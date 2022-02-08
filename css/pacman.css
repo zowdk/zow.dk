@@ -36,3 +36,19 @@ body {
   border-radius: 50%;
   border: none;
 }
+.blinky {
+  background-color: darkred;
+  border: none;
+}
+.pinky {
+  background-color: hotpink;
+  border: none;
+}
+.inky {
+  background-color: midnightblue;
+  border: none;
+}
+.clyde {
+  background-color: orange;
+  border: none;
+}

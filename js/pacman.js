@@ -155,25 +155,37 @@ const ghosts = [
 ];
 
 //  draw ghosts on grid
-ghosts.forEach((ghost) =>
-  squares[ghost.startIndex].classList.add(ghost.className)
-);
+ghosts.forEach((ghost) => {
+  squares[ghost.currentIndex].classList.add(ghost.className),
+    squares[ghost.currentIndex].classList.add("ghost");
+});
 
 // move ghosts
 
 ghosts.forEach((ghost) => moveGhost(ghost));
 
-function moveGhost() {
+function moveGhost(ghost) {
   console.log("moved ghost");
   const directions = [-1, +1, -width, +width];
-  let directions = directions[Math.floor(Math.random() * directions.length)];
+  let direction = directions[Math.floor(Math.random() * directions.length)];
+  console.log(direction);
 
   ghost.timerId = setInterval(function () {
-    //remove ghost class
-    squares[ghost.currentIndex].classList.remove(ghost.className);
-    //add random direction
-    ghost.currentIndex += direction;
-    //readd ghost class
-    squares[ghost.currentIndex].classList.add(ghost.className);
+    // if next square does not conrain a wall or ghost
+    if (
+      !squares[ghost.currentIndex + direction].classList.contains("wall") &&
+      !squares[ghost.currentIndex + direction].classList.contains("ghost")
+    ) {
+      //remove ghost class
+      squares[ghost.currentIndex].classList.remove(ghost.className);
+      squares[ghost.currentIndex].classList.remove("ghost");
+      //add random direction
+      ghost.currentIndex += direction;
+      //readd ghost class
+      squares[ghost.currentIndex].classList.add(ghost.className);
+      squares[ghost.currentIndex].classList.add("ghost");
+    } else {
+      direction = direction[Math.floor(Math.random() * directions.length)];
+    }
   }, ghost.speed);
 }

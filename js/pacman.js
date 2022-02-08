@@ -1,6 +1,7 @@
 const width = 28;
 const grid = document.querySelector(".grid");
 const scoreboard = document.getElementById("score");
+let squares = [];
 
 //  28 * 28 = 784
 // 0 - pac dots
@@ -41,3 +42,16 @@ const layout = [
   0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
   1, 1, 1, 1,
 ];
+
+// create board
+function createBoard() {
+  for (i = 0; i < layout.length; i++) {
+    //   create a square
+    const square = document.createElement("div");
+    // put square into grid
+    grid.appendChild(square);
+    // put square in squares array
+    squares.push(square);
+  }
+}
+createBoard();

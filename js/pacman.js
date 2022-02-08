@@ -76,14 +76,30 @@ let pacmanCurrentIndex = 490;
 squares[pacmanCurrentIndex].classList.add("pacman");
 
 function control(e) {
-  if (e.keyCode === 40) {
-    console.log("pressed down");
-  } else if (e.keycode === 38) {
-    console.log("pressed up");
-  } else if (e.keyCode === 37) {
-    console.log("pressed left");
-  } else if (e.keyCode === 39) {
-    console.log("pressed right");
+  //   if (e.keyCode === 40) {
+  //     console.log("pressed down");
+  //   } else if (e.keycode === 38) {
+  //     console.log("pressed up");
+  //   } else if (e.keyCode === 37) {
+  //     console.log("pressed left");
+  //   } else if (e.keyCode === 39) {
+  //     console.log("pressed right");
+  //   }
+
+  switch (e.keyCode) {
+    case 40:
+      console.log("pressed down");
+      break;
+    case 38:
+      console.log("pressed up");
+      break;
+
+    case 37:
+      console.log("pressed left");
+      break;
+    case 39:
+      console.log("pressed right");
+      break;
   }
 }
 document.addEventListener(keydown, control);

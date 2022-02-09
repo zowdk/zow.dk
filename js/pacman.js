@@ -69,23 +69,34 @@ function createBoard() {
 }
 createBoard();
 
+// starting position of pacman
+let pacmanCurrentIndex = 490;
+squares[pacmanCurrentIndex].classList.add("pacman");
+
 function startGame() {
+  //remove pacman from grid
+  squares[pacmanCurrentIndex].classList.remove("pacman");
+  //remove ghosts from grid
   //draw ghosts on grid
   //pacman start position
+  pacmanCurrentIndex = 490;
   squares[pacmanCurrentIndex].classList.add("pacman");
+
   //set score to 0 in browser
   score = 0;
   scoreboard.textContent = score;
+
+  //   reset ghosts in lair
+
+  squares[ghost.currentIndex].classList.add(ghost.className),
+    squares[ghost.currentIndex].classList.add("ghost");
+
   //readd class: pac-dots, power-pellets to grid
 
   //remove message
   const message = document.getElementById("message");
   message.style.display = "none";
 }
-
-// starting position of pacman
-let pacmanCurrentIndex = 490;
-squares[pacmanCurrentIndex].classList.add("pacman");
 
 function control(e) {
   squares[pacmanCurrentIndex].classList.remove("pacman");

@@ -126,6 +126,8 @@ function control(e) {
       break;
   }
   squares[pacmanCurrentIndex].classList.add("pacman");
+  pacDotEaten();
+  powerPelletEaten();
 }
 document.addEventListener("keydown", control);
 
@@ -139,7 +141,7 @@ function pacDotEaten() {
 function powerPelletEaten() {
   //if Pacman is in same square
   if (squares[pacmanCurrentIndex].classList.contains("power-pellet")) {
-    //add score of 10
+    squares[pacmanCurrentIndex].classList.remove("power-pellet");
     score += 10;
     //change each of the ghosts to isScared
     ghosts.forEach((ghost) => (ghost.isScared = true));

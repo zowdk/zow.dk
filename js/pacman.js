@@ -155,29 +155,27 @@ function control(e) {
 
     case 37:
       console.log("pressed left");
-      if (
+      if (pacmanCurrentIndex === 364) {
+        pacmanCurrentIndex = 391;
+      } else if (
         !squares[pacmanCurrentIndex - 1].classList.contains("ghost-lair") &&
         !squares[pacmanCurrentIndex - 1].classList.contains("wall") &&
         pacmanCurrentIndex % width !== 0
       ) {
         pacmanCurrentIndex -= 1;
-        if (pacmanCurrentIndex === 364) {
-          pacmanCurrentIndex = 391;
-        }
       }
       break;
 
     case 39:
       console.log("pressed right");
-      if (
+      if (pacmanCurrentIndex === 391) {
+        pacmanCurrentIndex = 364;
+      } else if (
         !squares[pacmanCurrentIndex + 1].classList.contains("ghost-lair") &&
         !squares[pacmanCurrentIndex + 1].classList.contains("wall") &&
         pacmanCurrentIndex % width < width - 1
       ) {
         pacmanCurrentIndex += 1;
-      }
-      if (pacmanCurrentIndex === 391) {
-        pacmanCurrentIndex = 364;
       }
 
       break;

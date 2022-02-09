@@ -227,12 +227,21 @@ function moveGhost(ghost) {
       //readd: ghost.className and "ghost"
       squares[ghost.currentIndex].className.add("ghost", ghost.className);
     }
+    gameOver();
   }, ghost.speed);
 }
 //  check for game over
 function gameOver() {
   // if square pacman is in contains a ghost AND it is not a scared-ghost
-  //stop each ghost moving
-  //disable control function
-  //tell the user the
+  if (
+    squares[pacmanCurrentIndex].classList.contains("ghost") &&
+    !squares[pacmanCurrentIndex].classList.contains("scared-ghost")
+  ) {
+    //stop each ghost moving
+    ghosts.forEach((ghost) => clearInterval(ghost.timerId));
+    //disable control function
+    document.removeEventListener("keydown", control);
+    //tell the user the game is over
+    scoreboard.innerHTML = "Game Over!";
+  }
 }

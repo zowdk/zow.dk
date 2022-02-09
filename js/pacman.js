@@ -146,7 +146,7 @@ function powerPelletEaten() {
     //change each of the ghosts to isScared
     ghosts.forEach((ghost) => (ghost.isScared = true));
     //use set timeout to unscare ghosts after 10s
-    setTimeout(unScareGhosts, 1000);
+    setTimeout(unScareGhosts, 10000);
   }
 }
 

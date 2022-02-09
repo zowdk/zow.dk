@@ -229,3 +229,10 @@ function moveGhost(ghost) {
     }
   }, ghost.speed);
 }
+//  check for game over
+function gameOver() {
+  // if square pacman is in contains a ghost AND it is not a scared-ghost
+  //stop each ghost moving
+  //disable control function
+  //tell the user the
+}

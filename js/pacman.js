@@ -190,13 +190,8 @@ function moveGhost(ghost) {
   ghost.timerId = setInterval(function () {
     // if next square does not contain a wall or ghost
     if (
-      !squares[ghost.currentIndex + direction].classList.contains.remove(
-        "wall"
-      ) &&
-      !squares[ghost.currentIndex + direction].classList.contains.remove(
-        "ghost",
-        "scared-ghost"
-      )
+      !squares[ghost.currentIndex + direction].classList.contains("wall") &&
+      !squares[ghost.currentIndex + direction].classList.contains("ghost")
     ) {
       //remove ghost class
       squares[ghost.currentIndex].classList.remove(ghost.className);

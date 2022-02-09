@@ -260,6 +260,7 @@ function gameOver() {
     document.removeEventListener("keydown", control);
     //tell the user the game is over
     const message = document.getElementById("message");
+    message.textContent = "👾 👾 Game Over! 👾 👾";
     message.style.display = "block";
   }
 }
@@ -274,6 +275,7 @@ function checkForWin() {
     document.removeEventListener("keydown", control);
     //tell user they've won
     const message = document.getElementById("message");
+    message.textContent = "🍇 🍉 You Win! 🍓 🍌";
     message.style.display = "block";
   }
 }

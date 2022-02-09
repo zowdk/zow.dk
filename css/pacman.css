@@ -90,9 +90,9 @@ button {
   letter-spacing: 1px;
   background-color: #ff8fa3;
   color: #fff;
+  box-shadow: -2px 6px 18px 3px rgba(0, 0, 0, 0.75);
 }
 button:hover,
 button:focus {
   background-color: #ffb3c1;
-  box-shadow: -2px 6px 18px 3px rgba(0, 0, 0, 0.75);
 }

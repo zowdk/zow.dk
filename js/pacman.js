@@ -99,13 +99,16 @@ function startGame() {
   //pacman start position, original color
   pacmanCurrentIndex = 490;
   squares[pacmanCurrentIndex].classList.add("pacman");
-  //remove ghosts from grid
 
   //   reset ghost state
   unScareGhosts();
   // move ghosts
   ghosts.forEach((ghost) => {
-    //reset ghost start index
+    // remove ghosts from grid
+    squares[ghost.currentIndex].classList.remove(ghost.className);
+    squares[ghost.currentIndex].classList.remove("ghost");
+
+    // reset ghost start index
     ghost.currentIndex = ghost.startIndex;
     //readd ghosts tp grid
     squares[ghost.currentIndex].classList.add(ghost.className);

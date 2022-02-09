@@ -210,7 +210,10 @@ function moveGhost(ghost) {
     }
 
     //if ghost is scared and pacman is on it
-    if (ghost.isScared && squares[ghost.currentIndex].contains("pacman")) {
+    if (
+      ghost.isScared &&
+      squares[ghost.currentIndex].classList.contains("pacman")
+    ) {
       //remove: ghost.className, "ghost", and "scared-ghost"
       squares[ghost.currentIndex].classList.remove(
         ghost.className,

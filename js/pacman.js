@@ -68,7 +68,15 @@ function createBoard() {
 }
 createBoard();
 
-function startGame() {}
+function startGame() {
+  //draw ghosts on grid
+  //pacman start position
+  squares[pacmanCurrentIndex].classList.add("pacman");
+  //set score to 0 in browser
+  //readd class: pac-dots, power-pellets to grid
+
+  //remove game over message
+}
 
 // starting position of pacman
 let pacmanCurrentIndex = 490;

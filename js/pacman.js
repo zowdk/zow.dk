@@ -3,8 +3,26 @@ const grid = document.querySelector(".grid");
 const scoreboard = document.getElementById("score");
 const startBtn = document.getElementById("start");
 const message = " ";
+
 let squares = [];
 let score = 0;
+
+class Ghost {
+  constructor(className, startIndex, speed) {
+    this.className = className;
+    this.startIndex = startIndex;
+    this.speed = speed;
+    this.currentIndex = startIndex;
+    this.isScared = false;
+    this.timerId = 0;
+  }
+}
+const ghosts = [
+  new Ghost("blinky", 348, 250),
+  new Ghost("pinky", 376, 400),
+  new Ghost("inky", 351, 300),
+  new Ghost("clyde", 379, 500),
+];
 
 //  28 * 28 = 784
 // 0 - pac dots
@@ -83,13 +101,17 @@ function startGame() {
   squares[pacmanCurrentIndex].classList.add("pacman");
   //remove ghosts from grid
 
-  //reset ghost start index
-  ghost.currentIndex = ghost.startIndex;
-  //readd ghosts tp grid
-  squares[ghost.currentIndex].classList.add(ghost.className),
-    squares[ghost.currentIndex].classList.add("ghost");
   //   reset ghost state
   unScareGhosts();
+  // move ghosts
+  ghosts.forEach((ghost) => {
+    //reset ghost start index
+    ghost.currentIndex = ghost.startIndex;
+    //readd ghosts tp grid
+    squares[ghost.currentIndex].classList.add(ghost.className);
+    squares[ghost.currentIndex].classList.add("ghost");
+    moveGhost(ghost);
+  });
 
   //set score to 0 in browser
   score = 0;
@@ -191,30 +213,11 @@ function unScareGhosts() {
   ghosts.forEach((ghost) => (ghost.isScared = false));
 }
 
-class Ghost {
-  constructor(className, startIndex, speed) {
-    this.className = className;
-    this.startIndex = startIndex;
-    this.speed = speed;
-    this.currentIndex = startIndex;
-    this.isScared = false;
-    this.timerId = 0;
-  }
-}
-const ghosts = [
-  new Ghost("blinky", 348, 250),
-  new Ghost("pinky", 376, 400),
-  new Ghost("inky", 351, 300),
-  new Ghost("clyde", 379, 500),
-];
-
 //  draw ghosts on grid
 ghosts.forEach((ghost) => {
   squares[ghost.currentIndex].classList.add(ghost.className),
     squares[ghost.currentIndex].classList.add("ghost");
 });
-// move ghosts
-ghosts.forEach((ghost) => moveGhost(ghost));
 
 function moveGhost(ghost) {
   const directions = [-1, +1, -width, +width];

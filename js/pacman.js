@@ -97,6 +97,8 @@ squares[pacmanCurrentIndex].classList.add("pacman");
 // starting position of ghosts
 
 function startGame() {
+  document.addEventListener("keydown", control);
+
   createBoard();
 
   //pacman start position, original color
@@ -114,14 +116,11 @@ function startGame() {
     squares[ghost.currentIndex].classList.add("ghost");
     clearInterval(ghost.timerId);
     moveGhost(ghost);
-    // TODO: clear interval for ghost movement speed
   });
 
   //set score to 0 in browser
   score = 0;
   scoreboard.textContent = score;
-
-  // TODO: readd class: pac-dots, power-pellets to grid
 
   //remove message
   message.textContent = " ";
@@ -189,7 +188,6 @@ function control(e) {
   checkForWin();
   gameOver();
 }
-document.addEventListener("keydown", control);
 
 function pacDotEaten() {
   if (squares[pacmanCurrentIndex].classList.contains("pac-dot")) {
@@ -262,7 +260,7 @@ function moveGhost(ghost) {
       //add 100 pts
       score += 100;
       //readd: ghost.className and "ghost"
-      squares[ghost.currentIndex].className.add("ghost", ghost.className);
+      squares[ghost.currentIndex].classList.add("ghost", ghost.className);
     }
     gameOver();
   }, ghost.speed);

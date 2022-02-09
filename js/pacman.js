@@ -191,7 +191,10 @@ function moveGhost(ghost) {
     // if next square does not conrain a wall or ghost
     if (
       !squares[ghost.currentIndex + direction].classList.contains("wall") &&
-      !squares[ghost.currentIndex + direction].classList.contains("ghost")
+      !squares[ghost.currentIndex + direction].classList.contains(
+        "ghost",
+        "scared-ghost"
+      )
     ) {
       //remove ghost class
       squares[ghost.currentIndex].classList.remove(ghost.className);
@@ -203,6 +206,10 @@ function moveGhost(ghost) {
       squares[ghost.currentIndex].classList.add("ghost");
     } else {
       direction = directions[Math.floor(Math.random() * directions.length)];
+    }
+    //if the ghost is scared
+    if (ghost.isScared) {
+      squares[ghost.currentIndex].classList.add("scared-ghost");
     }
   }, ghost.speed);
 }

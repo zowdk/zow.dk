@@ -128,6 +128,8 @@ function control(e) {
   squares[pacmanCurrentIndex].classList.add("pacman");
   pacDotEaten();
   powerPelletEaten();
+  checkForWin();
+  gameOver();
 }
 document.addEventListener("keydown", control);
 
@@ -182,10 +184,8 @@ ghosts.forEach((ghost) => {
 ghosts.forEach((ghost) => moveGhost(ghost));
 
 function moveGhost(ghost) {
-  console.log("moved ghost");
   const directions = [-1, +1, -width, +width];
   let direction = directions[Math.floor(Math.random() * directions.length)];
-  console.log(direction);
 
   ghost.timerId = setInterval(function () {
     // if next square does not contain a wall or ghost
@@ -243,5 +243,18 @@ function gameOver() {
     document.removeEventListener("keydown", control);
     //tell the user the game is over
     scoreboard.innerHTML = "Game Over!";
+  }
+}
+
+// check for win
+function checkForWin() {
+  if (score === 274) {
+    //stop each ghost moving
+    ghosts.forEach((ghost) => clearInterval(ghost.timerId));
+
+    //disable control
+    document.removeEventListener("keydown", control);
+    //tell user they've won
+    scoreboard.innerHTML = "You win!";
   }
 }

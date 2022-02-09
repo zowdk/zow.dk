@@ -210,13 +210,19 @@ function moveGhost(ghost) {
     }
 
     //if ghost is scared and pacman is on it
-
-    //remove: ghost.className, "ghost", and "scared-ghost"
-
-    //reset ghost's startIndex
-
-    //add 100 pts
-
-    //readd: ghost.className and "ghost"
+    if (ghost.isScared && squares[ghost.currentIndex].contains("pacman")) {
+      //remove: ghost.className, "ghost", and "scared-ghost"
+      squares[ghost.currentIndex].classList.remove(
+        ghost.className,
+        "ghost",
+        "scared-ghost"
+      );
+      //reset ghost's startIndex
+      ghost.currentIndex = ghost.startIndex;
+      //add 100 pts
+      score += 100;
+      //readd: ghost.className and "ghost"
+      squares[ghost.currentIndex].className.add("ghost", ghost.className);
+    }
   }, ghost.speed);
 }

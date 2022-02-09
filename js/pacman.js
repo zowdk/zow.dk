@@ -208,5 +208,15 @@ function moveGhost(ghost) {
     if (ghost.isScared) {
       squares[ghost.currentIndex].classList.add("scared-ghost");
     }
+
+    //if ghost is scared and pacman is on it
+
+    //remove: ghost.className, "ghost", and "scared-ghost"
+
+    //reset ghost's startIndex
+
+    //add 100 pts
+
+    //readd: ghost.className and "ghost"
   }, ghost.speed);
 }

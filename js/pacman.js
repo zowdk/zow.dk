@@ -66,6 +66,9 @@ const layout = [
 
 // create board
 function createBoard() {
+  // create fresh gameboard
+  squares = [];
+  grid.innerHTML = "";
   for (i = 0; i < layout.length; i++) {
     //   create a square
     const square = document.createElement("div");
@@ -94,8 +97,8 @@ squares[pacmanCurrentIndex].classList.add("pacman");
 // starting position of ghosts
 
 function startGame() {
-  //remove pacman from grid
-  squares[pacmanCurrentIndex].classList.remove("pacman");
+  createBoard();
+
   //pacman start position, original color
   pacmanCurrentIndex = 490;
   squares[pacmanCurrentIndex].classList.add("pacman");
@@ -104,23 +107,21 @@ function startGame() {
   unScareGhosts();
   // move ghosts
   ghosts.forEach((ghost) => {
-    // remove ghosts from grid
-    squares[ghost.currentIndex].classList.remove(ghost.className);
-    squares[ghost.currentIndex].classList.remove("ghost");
-
     // reset ghost start index
     ghost.currentIndex = ghost.startIndex;
     //readd ghosts tp grid
     squares[ghost.currentIndex].classList.add(ghost.className);
     squares[ghost.currentIndex].classList.add("ghost");
+    clearInterval(ghost.timerId);
     moveGhost(ghost);
+    // TODO: clear interval for ghost movement speed
   });
 
   //set score to 0 in browser
   score = 0;
   scoreboard.textContent = score;
 
-  //readd class: pac-dots, power-pellets to grid
+  // TODO: readd class: pac-dots, power-pellets to grid
 
   //remove message
   message.textContent = " ";

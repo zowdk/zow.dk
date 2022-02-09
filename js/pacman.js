@@ -136,6 +136,21 @@ function pacDotEaten() {
     scoreboard.innerHTML = score;
   }
 }
+function powerPelletEaten() {
+  //if Pacman is in same square
+  if (squares[pacmanCurrentIndex].classList.contains("power-pellet")) {
+    //add score of 10
+    score += 10;
+    //change each of the ghosts to isScared
+    ghosts.forEach((ghost) => (ghost.isScared = true));
+    //use set timeout to unscare ghosts after 10s
+    setTimeout(unScareGhosts, 1000);
+  }
+}
+
+function unScareGhosts() {
+  ghosts.forEach((ghost) => (ghost.isScared = false));
+}
 
 class Ghost {
   constructor(className, startIndex, speed) {
@@ -144,7 +159,7 @@ class Ghost {
     this.speed = speed;
     this.currentIndex = startIndex;
     this.isScared = false;
-    this.timerId = Nan;
+    this.timerId = 0;
   }
 }
 const ghosts = [
@@ -185,7 +200,7 @@ function moveGhost(ghost) {
       squares[ghost.currentIndex].classList.add(ghost.className);
       squares[ghost.currentIndex].classList.add("ghost");
     } else {
-      direction = direction[Math.floor(Math.random() * directions.length)];
+      direction = directions[Math.floor(Math.random() * directions.length)];
     }
   }, ghost.speed);
 }

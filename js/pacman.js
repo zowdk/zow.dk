@@ -2,7 +2,7 @@ const width = 28;
 const grid = document.querySelector(".grid");
 const scoreboard = document.getElementById("score");
 const startBtn = document.getElementById("start");
-const message = " ";
+const message = document.getElementById("message");
 
 let squares = [];
 let score = 0;
@@ -120,10 +120,7 @@ function startGame() {
   //readd class: pac-dots, power-pellets to grid
 
   //remove message
-  message = document.getElementById("message");
   message.textContent = " ";
-  message.style.display = "block";
-  //   message.style.display = "none";
 }
 //add start game event listener here?
 startBtn.addEventListener("click", startGame);
@@ -278,7 +275,6 @@ function gameOver() {
     //disable control function
     document.removeEventListener("keydown", control);
     //tell the user the game is over
-    const message = document.getElementById("message");
     message.textContent = "👾👾 Game Over! 👾👾";
     message.style.display = "block";
   }
@@ -293,7 +289,6 @@ function checkForWin() {
     //disable control
     document.removeEventListener("keydown", control);
     //tell user they've won
-    const message = document.getElementById("message");
     message.textContent = "🍇 🍉 You Win! 🍓 🍌";
     message.style.display = "block";
   }

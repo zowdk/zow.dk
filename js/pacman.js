@@ -195,7 +195,7 @@ function moveGhost(ghost) {
     ) {
       //remove ghost class
       squares[ghost.currentIndex].classList.remove(ghost.className);
-      squares[ghost.currentIndex].classList.remove("ghost");
+      squares[ghost.currentIndex].classList.remove("ghost", "scared-ghost");
       //add random direction
       ghost.currentIndex += direction;
       //readd ghost class

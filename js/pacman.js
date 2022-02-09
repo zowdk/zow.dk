@@ -188,10 +188,12 @@ function moveGhost(ghost) {
   console.log(direction);
 
   ghost.timerId = setInterval(function () {
-    // if next square does not conrain a wall or ghost
+    // if next square does not contain a wall or ghost
     if (
-      !squares[ghost.currentIndex + direction].classList.contains("wall") &&
-      !squares[ghost.currentIndex + direction].classList.contains(
+      !squares[ghost.currentIndex + direction].classList.contains.remove(
+        "wall"
+      ) &&
+      !squares[ghost.currentIndex + direction].classList.contains.remove(
         "ghost",
         "scared-ghost"
       )

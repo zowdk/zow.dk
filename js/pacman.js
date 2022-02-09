@@ -2,6 +2,7 @@ const width = 28;
 const grid = document.querySelector(".grid");
 const scoreboard = document.getElementById("score");
 const startBtn = document.getElementById("start");
+const message = " ";
 let squares = [];
 let score = 0;
 
@@ -73,9 +74,13 @@ function startGame() {
   //pacman start position
   squares[pacmanCurrentIndex].classList.add("pacman");
   //set score to 0 in browser
+  score = 0;
+  scoreboard.textContent = score;
   //readd class: pac-dots, power-pellets to grid
 
-  //remove game over message
+  //remove message
+  const message = document.getElementById("message");
+  message.style.display = "none";
 }
 
 // starting position of pacman
@@ -254,7 +259,8 @@ function gameOver() {
     //disable control function
     document.removeEventListener("keydown", control);
     //tell the user the game is over
-    scoreboard.innerHTML = "Game Over!";
+    const message = document.getElementById("message");
+    message.style.display = "block";
   }
 }
 
@@ -267,6 +273,7 @@ function checkForWin() {
     //disable control
     document.removeEventListener("keydown", control);
     //tell user they've won
-    scoreboard.innerHTML = "You win!";
+    const message = document.getElementById("message");
+    message.style.display = "block";
   }
 }

@@ -1,3 +1,4 @@
+/* resets */
 html,
 body {
   margin: 0;
@@ -6,6 +7,9 @@ body {
   background-color: #e9d8a6;
 }
 
+/* typography */
+
+/* general styles */
 .grid {
   width: 420px;
   height: 420px;
@@ -56,3 +60,4 @@ body {
   background-color: aquamarine;
   border: none;
 }
+/* layout */

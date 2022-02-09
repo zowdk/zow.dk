@@ -1,6 +1,7 @@
 const width = 28;
 const grid = document.querySelector(".grid");
 const scoreboard = document.getElementById("score");
+const startBtn = document.getElementById("start");
 let squares = [];
 let score = 0;
 
@@ -67,6 +68,8 @@ function createBoard() {
 }
 createBoard();
 
+function startGame() {}
+
 // starting position of pacman
 let pacmanCurrentIndex = 490;
 squares[pacmanCurrentIndex].classList.add("pacman");
@@ -132,6 +135,7 @@ function control(e) {
   gameOver();
 }
 document.addEventListener("keydown", control);
+document.addEventListener("click", startGame);
 
 function pacDotEaten() {
   if (squares[pacmanCurrentIndex].classList.contains("pac-dot")) {

@@ -73,30 +73,38 @@ createBoard();
 let pacmanCurrentIndex = 490;
 squares[pacmanCurrentIndex].classList.add("pacman");
 
+// starting position of ghosts
+
 function startGame() {
   //remove pacman from grid
   squares[pacmanCurrentIndex].classList.remove("pacman");
-  //remove ghosts from grid
-  //draw ghosts on grid
-  //pacman start position
+  //pacman start position, original color
   pacmanCurrentIndex = 490;
   squares[pacmanCurrentIndex].classList.add("pacman");
+  //remove ghosts from grid
+
+  //reset ghost start index
+  ghost.currentIndex = ghost.startIndex;
+  //readd ghosts tp grid
+  squares[ghost.currentIndex].classList.add(ghost.className),
+    squares[ghost.currentIndex].classList.add("ghost");
+  //   reset ghost state
+  unScareGhosts();
 
   //set score to 0 in browser
   score = 0;
   scoreboard.textContent = score;
 
-  //   reset ghosts in lair
-
-  squares[ghost.currentIndex].classList.add(ghost.className),
-    squares[ghost.currentIndex].classList.add("ghost");
-
   //readd class: pac-dots, power-pellets to grid
 
   //remove message
-  const message = document.getElementById("message");
-  message.style.display = "none";
+  message = document.getElementById("message");
+  message.textContent = " ";
+  message.style.display = "block";
+  //   message.style.display = "none";
 }
+//add start game event listener here?
+startBtn.addEventListener("click", startGame);
 
 function control(e) {
   squares[pacmanCurrentIndex].classList.remove("pacman");
@@ -159,7 +167,6 @@ function control(e) {
   gameOver();
 }
 document.addEventListener("keydown", control);
-document.addEventListener("click", startGame);
 
 function pacDotEaten() {
   if (squares[pacmanCurrentIndex].classList.contains("pac-dot")) {
@@ -206,9 +213,7 @@ ghosts.forEach((ghost) => {
   squares[ghost.currentIndex].classList.add(ghost.className),
     squares[ghost.currentIndex].classList.add("ghost");
 });
-
 // move ghosts
-
 ghosts.forEach((ghost) => moveGhost(ghost));
 
 function moveGhost(ghost) {

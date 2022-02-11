@@ -42,6 +42,7 @@ header {
   padding: 1em;
   margin-top: 0.5em;
 }
+
 .grid {
   width: 420px;
   height: 420px;
@@ -65,7 +66,9 @@ header {
 .wall {
   background-color: #ff8fa3;
 }
+
 .info {
+  /* TODO: set max width + add media query to make responsive */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -73,8 +76,6 @@ header {
 }
 #score {
   justify-content: left;
-}
-#message {
 }
 
 /* general styles */

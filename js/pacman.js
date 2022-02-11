@@ -289,7 +289,7 @@ function checkForWin() {
     //disable control
     document.removeEventListener("keydown", control);
     //tell user they've won
-    message.textContent = "🍇 🍉 You Win! 🍓 🍌";
+    message.textContent = "🍇 🍉 Winner! 🍓 🍌";
     message.style.display = "block";
   }
 }

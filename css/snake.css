@@ -44,7 +44,7 @@ h2 {
 /* layout */
 
 .container {
-  max-width: 600px;
+  max-width: 80vw;
   margin: 0 auto;
   margin-top: 4em;
   background-color: #52b69a;

@@ -497,17 +497,41 @@ header {
 
 .portfolio {
   display: grid;
+  grid-gap: 1em;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   max-width: 0 auto;
 }
 .portfolio__img {
   transition: transform 750ms cubic-bezier(0.5, 0, 0.5, 1), opacity 250ms linear;
-  width: 500px;
-  height: 500px;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  background-color: #005f73;
 }
 .portfolio__img {
   background: var(--clr-accent);
   overflow: hidden;
+}
+.portfolio a {
+  text-decoration: none;
+}
+.portfolio__post-thumb {
+  background-color: #264653;
+  color: #fff;
+  padding: 1em;
+  padding-bottom: 1.25em;
+}
+.portfolio__post-thumb__about {
+  max-width: 45ch;
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+.portfolio__thumbnail:hover,
+.portfolio__thumbnail:focus {
+  -webkit-transform: rotateZ(-10deg);
+  -ms-transform: rotateZ(-10deg);
+  transform: rotateZ(-10deg);
 }
 
 /* Footer */

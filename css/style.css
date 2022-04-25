@@ -514,6 +514,16 @@ header {
 .portfolio a {
   text-decoration: none;
 }
+.portfolio__ {
+  border-radius: 20px;
+}
+.portfolio__img {
+  border-radius: 20px 20px 0 0;
+}
+.portfolio__post-thumb {
+  border-radius: 0 0 20px 20px;
+}
+
 .portfolio__post-thumb {
   background-color: #264653;
   color: #fff;
@@ -527,12 +537,6 @@ header {
   justify-content: space-around;
   margin: 0 auto;
 }
-/* .portfolio__thumbnail:hover,
-.portfolio__thumbnail:focus {
-  -webkit-transform: rotateZ(-10deg);
-  -ms-transform: rotateZ(-10deg);
-  transform: rotateZ(-10deg);
-} */
 
 /* Footer */
 

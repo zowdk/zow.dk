@@ -527,12 +527,12 @@ header {
   justify-content: space-around;
   margin: 0 auto;
 }
-.portfolio__thumbnail:hover,
+/* .portfolio__thumbnail:hover,
 .portfolio__thumbnail:focus {
   -webkit-transform: rotateZ(-10deg);
   -ms-transform: rotateZ(-10deg);
   transform: rotateZ(-10deg);
-}
+} */
 
 /* Footer */
 

@@ -135,7 +135,9 @@ h3 {
   position: absolute;
   width: 50%;
 }
-
+span {
+  color: goldenrod;
+}
 /* header */
 
 header {

@@ -540,7 +540,21 @@ header {
   justify-content: space-around;
   margin: 0 auto;
 }
-
+.project-tile {
+  padding: 1.5em;
+  border-radius: 20px;
+  margin: 0 auto;
+  height: fit-content;
+}
+.project-tile-200 {
+  background-color: #9dbebb;
+}
+.project-tile-300 {
+  background-color: #77aca2;
+}
+.project-tile-400 {
+  background-color: #468189;
+}
 /* Footer */
 
 footer {

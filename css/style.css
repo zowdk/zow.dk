@@ -526,15 +526,17 @@ header {
 .portfolio__img {
   border-radius: 20px 20px 0 0;
 }
-.portfolio__post-thumb {
-  border-radius: 0 0 20px 20px;
-}
 
 .portfolio__post-thumb {
+  border-radius: 0 0 20px 20px;
   background-color: #264653;
   color: #fff;
   padding: 1em;
   padding-bottom: 1.25em;
+}
+.portfilio__post-thumb-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
 }
 .portfolio__post-thumb__about {
   max-width: 45ch;

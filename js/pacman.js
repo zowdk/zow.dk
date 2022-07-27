@@ -1,3 +1,13 @@
+//todo: levels variable
+
+//todo: new layout
+
+//todo: start level function -do NOT reset the score
+
+//todo: start game function -reset score, then start level
+
+//todo: store shortcut values in a variable: rather than "magic numbers" (why is it these values if in column 0 || column-grid-width/length - 1
+
 const width = 28;
 const grid = document.querySelector(".grid");
 const scoreboard = document.getElementById("score");

@@ -40,9 +40,6 @@ h2 {
   color: #184e77;
   font-size: 2.5rem;
 }
-
-/* layout */
-
 footer a {
   text-decoration: none;
   color: inherit;
@@ -51,6 +48,10 @@ footer a:hover,
 footer a:focus {
   color: #184e77;
 }
+footer span {
+  color: goldenrod;
+}
+/* layout */
 
 .container {
   max-width: 70vw;

@@ -288,7 +288,7 @@ header {
 
 .my-tallies {
   background-color: var(--clr-dark);
-  background-image: url(../img/tallies-bg.jpg);
+  background-image: url(../portfolio-2021/img/misc/tallies-bg.jpg);
   background-size: cover;
   background-blend-mode: multiply;
 
@@ -379,7 +379,7 @@ header {
 
 .my-skills {
   background-color: var(--clr-dark);
-  background-image: url(../img/skills-bg02.jpg);
+  background-image: url(../portfolio-2021/img/misc/skills-bg02.jpg);
   background-size: cover;
   background-blend-mode: multiply;
 

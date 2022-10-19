@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>💻 Home Page</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <!-- font awesome icons go here -->
+    <script
+      src="https://kit.fontawesome.com/7f3b3d32f3.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="diagonal-box-left">
+      <div class="diagonal-box-left--content">
+        <header>
+          <!-- Navigation -->
+          <nav class="nav">
+            <ul class="nav__list flex">
+              <li class="nav__list-item active">
+                <a href="./index.html" class="nav__link">Home</a>
+              </li>
+              <li class="nav__list-item">
+                <a href="#about" class="nav__link">About</a>
+              </li>
+              <li class="nav__list-item">
+                <a href="./pages/projects.html" class="nav__link">Projects</a>
+              </li>
+              <li class="nav__list-item">
+                <a href="./pages/hire-me.html" class="nav__link">Hiring?</a>
+              </li>
+              <li class="nav__list-item">
+                <a href="#contact" class="nav__link">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </header>
+        <!-- Section Intro -->
+        <section class="section__intro" id="#">
+          <div class="container-inner container-inner--hero">
+            <div class="hero-content flex">
+              <!-- <div class="hero-box__img"> -->
+              <img
+                class="hero-box__img"
+                src="./img/misc/devzoe.jpg"
+                alt="photo of Zoe"
+              />
+              <!-- </div> -->
+              <div class="hero-box__text flex">
+                <h1 class="section__title section__title--intro">
+                  Hej! I'm Zoe, <br />
+                  a Junior Frontend <span>Web Developer</span>.
+                </h1>
+                <p class="section__subtitle section__subtitle--intro">
+                  Nice to meet you^^
+                </p>
+                <a href="#contact" class="btn btn-connect">Let's connect.</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Section About -->
+
+    <section class="section__about bg-light" id="about">
+      <div class="container-inner container-inner--about flex">
+        <!-- about -->
+        <div class="about-box flex">
+          <div class="about-box--title flex">
+            <h2>TL;DR About</h2>
+          </div>
+          <div class="about-box--content">
+            <div class="textbox">
+              <p class="text-about">
+                I'm a Denmark based, self-taught developer, hungry to learn and
+                build products for the modern web.
+              </p>
+              <a class="link__hire-me text-about" href="./pages/hire-me.html"
+                ><p>
+                  I'm looking for full-time developer roles in the Copenhagen
+                  area.
+                </p></a
+              >
+            </div>
+          </div>
+          <a href="./pages/about.html">
+            <button class="btn btn--read-more">read more</button>
+          </a>
+        </div>
+        <!-- skills -->
+        <div class="skills-box flex">
+          <div class="skills-box--title">
+            <h2>Skills</h2>
+          </div>
+          <div class="skills-box--content">
+            <div class="skills-table grid">
+              <div class="skills-box-small flex">
+                <i class="fa-brands fa-html5 skill-icon"></i>
+                <h3 class="skill-name">HTML</h3>
+              </div>
+              <div class="skills-box-small flex">
+                <i class="fa-brands fa-css3-alt skill-icon"></i>
+                <h3 class="skill-name">CSS</h3>
+              </div>
+              <div class="skills-box-small flex">
+                <i class="fa-brands fa-square-js skill-icon"></i>
+                <h3 class="skill-name">JavaScript</h3>
+              </div>
+              <div class="skills-box-small flex">
+                <i class="fab fa-react skill-icon"></i>
+                <h3 class="skill-name">React</h3>
+              </div>
+              <div class="skills-box-small flex">
+                <i class="fas fa-mobile-alt skill-icon"></i>
+                <h3 class="skill-name">Responsive Design</h3>
+              </div>
+              <div class="skills-box-small flex">
+                <i class="fa-brands fa-github skill-icon"></i>
+                <h3 class="skill-name">GitHub</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Favorite Projects -->
+    <div class="diagonal-box-right">
+      <div class="diagonal-box-right--content">
+        <section id="projects" class="featured-projects">
+          <div class="container-inner container-inner--featured-projects">
+            <div class="featured-projects--title">
+              <h2 class="section__title">Favorite Projects</h2>
+            </div>
+
+            <div class="featured-projects--content grid">
+              <!-- project 1 -->
+              <div class="project-box flex">
+                <div class="project-box-header">
+                  <p class="project-header">Netflix Clone</p>
+                  <p class="project-subheader">Pair Project | In-progress</p>
+                </div>
+                <!-- <div class="project-box-img-container"> -->
+                <img
+                  class="project-box-img-container project-box-img"
+                  src="./img/projects/netflix-home.png"
+                  alt="Netflix home page"
+                />
+                <img
+                  class="project-box-img-container project-box-img"
+                  src="./img/projects/netflix-sign-in.png"
+                  alt="Netflix home page"
+                />
+                <!-- </div> -->
+                <div class="project-box-tech-stack flex">
+                  <div class="tech-icon flex">
+                    <i class="fa-brands fa-react"></i>
+                    <p class="tech-icon--name">React</p>
+                  </div>
+                  <div class="tech-icon flex">
+                    <i class="fa-brands fa-square-js"></i>
+                    <p class="tech-icon--name">JavaScript</p>
+                  </div>
+                  <div class="tech-icon flex">
+                    <i class="fa-brands fa-css3-alt"></i>
+                    <p class="tech-icon--name">CSS</p>
+                  </div>
+                  <div class="tech-icon flex">
+                    <i class="fa-solid fa-fire"></i>
+                    <p class="tech-icon--name">Firebase</p>
+                  </div>
+                </div>
+                <div class="project-box-description-container">
+                  <p class="project-box-description">
+                    Clones of the Netflix Home, Browse, Sign-in and Sign-up
+                    pages.
+                  </p>
+                </div>
+                <div class="project-box-btn-container flex">
+                  <a href="#" target="_blank">
+                    <button class="btn project-btn">
+                      <div class="btn-icon">
+                        <i class="fa-regular fa-share-from-square"></i>
+                      </div>
+                      <p>Live Site</p>
+                    </button>
+                  </a>
+                  <a href="#" target="_blank">
+                    <button class="btn project-btn">
+                      <div class="btn-icon">
+                        <i class="fa-brands fa-github"></i>
+                      </div>
+                      <p>Source</p>
+                    </button>
+                  </a>
+                </div>
+              </div>
+
+              <!-- project 2 -->
+              <div class="project-box flex">
+                <div class="project-box-header">
+                  <p class="project-header">My Life in Weeks</p>
+                  <p class="project-subheader">Solo project | 1 day</p>
+                </div>
+                <!-- <div class="project-box-img-container"> -->
+                <img
+                  class="project-box-img-container project-box-img"
+                  src="./img/projects/my-life-in-weeks.png"
+                  alt=""
+                />
+                <!-- </div> -->
+                <div class="project-box-tech-stack flex">
+                  <div class="tech-icon flex">
+                    <i class="fa-brands fa-square-js"></i>
+                    <p class="tech-icon--name">JavaScript</p>
+                  </div>
+                  <div class="tech-icon flex">
+                    <i class="fa-brands fa-css3-alt"></i>
+                    <p class="tech-icon--name">CSS</p>
+                  </div>
+                  <div class="tech-icon flex">
+                    <i class="fa-brands fa-html5"></i>
+                    <p class="tech-icon--name">HTML</p>
+                  </div>
+                </div>
+                <div class="project-box-description-container">
+                  <p class="project-box-description">
+                    Some fun with CSS grid and JavaScript date math. Each square
+                    represents one week in a 100-year lifespan, while darkened
+                    squareds are weeks already lived.
+                  </p>
+                </div>
+                <div class="project-box-btn-container flex">
+                  <a
+                    href="https://zowdk.github.io/my-life-in-weeks/"
+                    target="_blank"
+                  >
+                    <button class="btn project-btn">
+                      <div class="btn-icon">
+                        <i class="fa-regular fa-share-from-square"></i>
+                      </div>
+                      <p>Live Site</p>
+                    </button>
+                  </a>
+                  <a
+                    href="https://github.com/zowdk/my-life-in-weeks"
+                    target="_blank"
+                  >
+                    <button class="btn project-btn">
+                      <div class="btn-icon">
+                        <i class="fa-brands fa-github"></i>
+                      </div>
+                      <p>Source</p>
+                    </button>
+                  </a>
+                </div>
+              </div>
+
+              <!-- project 3 -->
+              <div class="project-box flex">
+                <div class="project-box-header">
+                  <p class="project-header">(Unofficial) On-call</p>
+                  <p class="project-subheader">Solo project | 1 week</p>
+                </div>
+                <!-- <div class="project-box-img-container"> -->
+                <img
+                  class="project-box-img-container project-box-img"
+                  src="./img/projects/on-call.png"
+                  alt=""
+                />
+                <!-- </div> -->
+                <div class="project-box-tech-stack flex">
+                  <div class="tech-icon flex">
+                    <i class="fa-brands fa-html5"></i>
+                    <p class="tech-icon--name">HTML</p>
+                  </div>
+                  <div class="tech-icon flex">
+                    <i class="fa-brands fa-css3-alt"></i>
+                    <p class="tech-icon--name">CSS</p>
+                  </div>
+                </div>
+                <div class="project-box-description-container">
+                  <p class="project-box-description">
+                    An unofficial product landing page for Volvo's "on-call"
+                    app. Created for freeCodeCamp's challenge "Build a Product
+                    Landing Page".
+                  </p>
+                </div>
+                <div class="project-box-btn-container flex">
+                  <a
+                    href="https://zowdk.github.io/responsive-web-design/product-landing-pages/on-call/"
+                    target="_blank"
+                  >
+                    <button class="btn project-btn">
+                      <div class="btn-icon">
+                        <i class="fa-regular fa-share-from-square"></i>
+                      </div>
+                      <p>Live Site</p>
+                    </button>
+                  </a>
+                  <a
+                    href="https://github.com/zowdk/responsive-web-design/tree/main/product-landing-pages/on-call"
+                    target="_blank"
+                  >
+                    <button class="btn project-btn">
+                      <div class="btn-icon">
+                        <i class="fa-brands fa-github"></i>
+                      </div>
+                      <p>Source</p>
+                    </button>
+                  </a>
+                </div>
+              </div>
+
+              <!-- project 4 -->
+              <div class="project-box flex">
+                <div class="project-box-header">
+                  <p class="project-header">Snake Clone</p>
+                  <p class="project-subheader">Solo project | 1 week</p>
+                </div>
+                <!-- <div class="project-box-img-container"> -->
+                <img
+                  class="project-box-img-container project-box-img"
+                  src="./img/projects/snake-game.png"
+                  alt=""
+                />
+                <!-- </div> -->
+                <div class="project-box-tech-stack flex">
+                  <div class="tech-icon flex">
+                    <i class="fa-brands fa-square-js"></i>
+                    <p class="tech-icon--name">JavaScript</p>
+                  </div>
+                  <div class="tech-icon flex">
+                    <i class="fa-brands fa-css3-alt"></i>
+                    <p class="tech-icon--name">CSS</p>
+                  </div>
+                  <div class="tech-icon flex">
+                    <i class="fa-brands fa-html5"></i>
+                    <p class="tech-icon--name">HTML</p>
+                  </div>
+                </div>
+                <div class="project-box-description-container">
+                  <p class="project-box-description">
+                    A single-player browser game. Players control a snake-like
+                    avatar using arrow keys: Collect as many points as possible
+                    without hitting the walls, or oneself.
+                  </p>
+                </div>
+                <div class="project-box-btn-container flex">
+                  <a href="http://zow.dk/snake-game.html" target="_blank">
+                    <button class="btn project-btn">
+                      <div class="btn-icon">
+                        <i class="fa-regular fa-share-from-square"></i>
+                      </div>
+                      <p>Live Site</p>
+                    </button>
+                  </a>
+                  <a
+                    href="https://github.com/zowdk/zow.dk/blob/master/snake-game.html"
+                    target="_blank"
+                  >
+                    <button class="btn project-btn">
+                      <div class="btn-icon">
+                        <i class="fa-brands fa-github"></i>
+                      </div>
+                      <p>Source</p>
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- see more projects? -->
+            <div class="project-box-footer">
+              <a href="./pages/projects.html">
+                <button class="btn btn-portfolio">See more projects...</button>
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Section Contact -->
+    <section class="section__contact bg-light" id="contact">
+      <div class="container-inner container-inner--contact flex">
+        <!-- Contact -->
+        <div class="contact-box flex">
+          <div class="contact-box--title">
+            <h2>Contact</h2>
+          </div>
+          <div class="contact-box--content">
+            <div class="textbox">
+              <p class="text-contact">
+                Let's connect! I'm open to feedback, collaboration, and am
+                also<a class="link__hire-me" href="./pages/hire-me.html">
+                  looking for a full-time junior developer role.</a
+                >
+
+                <a href="https://www.linkedin.com/in/zoemolivier/"
+                  ><strong>Linkedin</strong></a
+                >
+                is the best way to get in touch :-)
+              </p>
+            </div>
+          </div>
+          <a href="./pages/request-cv.html">
+            <button class="btn btn--contact">request a copy of my CV</button>
+          </a>
+        </div>
+        <!-- Links -->
+        <div class="links-box flex">
+          <div class="links-box--title">
+            <h2>Links</h2>
+          </div>
+          <div class="links-box--content">
+            <div class="links-table grid">
+              <a href="https://github.com/zowdk">
+                <div class="link-box-small flex">
+                  <i class="fa-brands fa-github social-icon"></i>
+                  <h3 class="link-name">Github</h3>
+                </div>
+              </a>
+              <a href="https://twitter.com/zowdk">
+                <div class="link-box-small flex">
+                  <i class="fa-brands fa-twitter social-icon"></i>
+                  <h3 class="link-name">Twitter</h3>
+                </div>
+              </a>
+              <a href="https://www.linkedin.com/in/zoemolivier/">
+                <div class="link-box-small flex">
+                  <i class="fa-brands fa-linkedin social-icon"></i>
+                  <h3 class="link-name">LinkedIn</h3>
+                </div>
+              </a>
+              <a href="https://codepen.io/zowdk">
+                <div class="link-box-small flex">
+                  <i class="fa-brands fa-codepen social-icon"></i>
+                  <h3 class="link-name">Codepen</h3>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Footer -->
+    <footer class="footer">
+      <div class="container-inner container-inner--footer">
+        <div class="copyright flex">
+          <div class="copyright-text">
+            <span> &lt; / &gt;</span> by
+            <a href="https://twitter.com/zowdk">@zowdk</a>
+          </div>
+          <div class="copyright-date">Copyright © 2022</div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>

@@ -131,11 +131,11 @@ header {
   list-style-type: none;
   padding: 0.5em;
   justify-content: space-between;
-  width: 60%;
+  width: 90%;
   margin-left: auto;
 }
 .nav__list-item {
-  /* font-size: var(--fs-h3); */
+  font-size: 0.9rem;
   justify-content: space-between;
   font-family: var(--ff-secondary);
   padding: 0.5em;

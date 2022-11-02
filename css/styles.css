@@ -442,6 +442,11 @@ header {
     width: 80%;
   }
 }
+@media (max-width: 1500px) {
+  .container-inner--featured-projects {
+    padding-block: inherit;
+  }
+}
 /* Footer */
 footer {
   background: var(--clr-dark);

@@ -121,7 +121,6 @@ header {
   padding: 1em;
 }
 .nav {
-  border: 2px solid green;
   width: 95vw;
   margin: 0 auto;
 }
@@ -131,7 +130,6 @@ header {
   justify-content: space-between;
   width: 100%;
   margin-left: auto;
-  border: 2px solid pink;
 }
 .nav__list-item {
   font-size: 0.9rem;

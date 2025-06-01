@@ -327,6 +327,7 @@ header {
   background-color: var(--clr-dark);
   color: var(--clr-accent-400);
   border-radius: 20px;
+  max-width: 80vw;
 }
 .project-header {
   font-size: var(--fs-h3);
@@ -342,6 +343,7 @@ header {
   height: auto;
   border-radius: 20px;
   margin-bottom: 0.5em;
+  max-width: 85%;
 }
 .project-box-tech-stack {
   justify-content: space-around;

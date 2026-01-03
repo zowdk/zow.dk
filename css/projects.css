@@ -249,6 +249,7 @@ header {
   padding: 0.35em 0.75em;
   border-radius: 25px;
   margin-bottom: 0.25em;
+  align-self: center;
 }
 
 .tech-icon--name {
@@ -298,6 +299,7 @@ header {
 }
 .social-icon {
   font-size: var(--fs-h2);
+  align-self: center;
 }
 .contact-box,
 .links-box {

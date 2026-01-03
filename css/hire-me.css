@@ -318,6 +318,7 @@ header {
 }
 .skill-icon {
   font-size: var(--fs-h1);
+  align-self: center;
 }
 @media (max-width: 1050px) {
   .container-inner--about {
@@ -478,6 +479,7 @@ header {
 }
 .social-icon {
   font-size: var(--fs-h2);
+  align-self: center;
 }
 .contact-box,
 .links-box {

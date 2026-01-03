@@ -285,6 +285,7 @@ header {
 .tally-icon {
   font-size: var(--fs-h2);
   margin-bottom: 0.25em;
+  align-self: center;
 }
 .tally-name {
   font-size: var(--fs-h3);
@@ -420,6 +421,7 @@ header {
 }
 .social-icon {
   font-size: var(--fs-h2);
+  align-self: center;
 }
 .contact-box,
 .links-box {
